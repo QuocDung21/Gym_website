@@ -1,7 +1,29 @@
+import { useEffect } from "react";
+import Aos from "aos";
 import "./App.css";
+import Header from "./components/Header/Header";
+import Exercises from "./components/UI/Exercises";
+import Footer from "./components/UI/Footer";
+import Hero from "./components/UI/Hero";
+import Pricing from "./components/UI/Pricing";
+import Start from "./components/UI/Start";
+import Testimonials from "./components/UI/Testimonials";
 
 function App() {
-  return <h1>Hello world!</h1>;
+  useEffect(() => {
+    Aos.init();
+  }, []);
+  return (
+    <>
+      <Header />
+      <Hero />
+      <Exercises />
+      <Start />
+      <Pricing />
+      <Testimonials />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
